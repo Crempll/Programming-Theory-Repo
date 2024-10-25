@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Cube : Shape
+public class Cube : Shape // INHERITANCE
 {
     void Awake()
     {
@@ -14,11 +14,12 @@ public class Cube : Shape
     {
         if (isSelecteble == true)
         {
-            Timer();
-            RotateShape.RotateThisShape(transform);
+            Timer(); // ABSTRACTION
+            RotateShape.RotateThisShape(transform); // ABSTRACTION
         }
     }
 
+    // POLYMORPHISM
     protected override void DisplayText()
     {
         selectedShapeText.text = $"You seleced: {ColorShape} {NameShape}";

@@ -11,17 +11,18 @@ public class Shape : MonoBehaviour
     private float totalTime = 3f;
 
     private string nameShape;
-    public string NameShape
+    public string NameShape // ENCAPSULATION
     {   
         get {return nameShape;}
         protected set {nameShape = value;}
     }
     private string colorShape;
-    public string ColorShape
+    public string ColorShape // ENCAPSULATION
     {   
         get {return colorShape;}
         protected set {colorShape = value;}
     }
+    
     protected virtual void DisplayText()
     {
         selectedShapeText.text = $"You selected: Shape";
