@@ -10,6 +10,15 @@ public class Sphere : Shape
         ColorShape = "Red";
     }
 
+    void Update()
+    {
+        if (isSelecteble == true)
+        {
+            Timer();
+            RotateShape.RotateThisShape(transform);
+        }
+    }
+
     protected override void DisplayText()
     {
         selectedShapeText.text = $"You seleced: {ColorShape} {NameShape}";
@@ -17,6 +26,7 @@ public class Sphere : Shape
 
     void OnMouseDown()
     {
+        isSelecteble = true;
         DisplayText();
     }
 }

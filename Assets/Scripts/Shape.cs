@@ -7,6 +7,9 @@ public class Shape : MonoBehaviour
 {
     [SerializeField] protected Text selectedShapeText;
 
+    protected bool isSelecteble;
+    private float totalTime = 3f;
+
     private string nameShape;
     public string NameShape
     {   
@@ -22,5 +25,15 @@ public class Shape : MonoBehaviour
     protected virtual void DisplayText()
     {
         selectedShapeText.text = $"You selected: Shape";
+    }
+
+    protected void Timer()
+    {
+        totalTime -= Time.deltaTime;
+
+        if(totalTime <= 0f)
+        {
+            isSelecteble = false;
+        }
     }
 }
