@@ -35,6 +35,7 @@ public class Shape : MonoBehaviour
         if(totalTime <= 0f)
         {
             isSelecteble = false;
+            totalTime = 3f;
         }
     }
 }
